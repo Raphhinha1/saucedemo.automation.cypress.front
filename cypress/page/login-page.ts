@@ -4,4 +4,8 @@ export default class LoginPage {
         cy.get('#password').type(password)
         cy.get('#login-button').click()
     }
+
+    static verifyLoginSuccess() {
+        cy.get('[data-test="title"]').should("have.text", "Products");
+    }
 }

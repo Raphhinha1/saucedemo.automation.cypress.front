@@ -5,16 +5,10 @@ module.exports = defineConfig({
   //screenshotOnRunFailure: false,
   useTsLoader: true,
 
-  defaultCommandTimeout: 60000,
-  experimentalMemoryManagement: true,
-  numTestsKeptInMemory: 20,
   viewportWidth: 1280,
   viewportHeight: 800,
   e2e: {
     baseUrl: "https://www.saucedemo.com/",
-    setupNodeEvents(on, config) {
-      this.defaultCommandTimeout = 60000
-    },
   },
   reporter: 'junit',
   reporterOptions: {
